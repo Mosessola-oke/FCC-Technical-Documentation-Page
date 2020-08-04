@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  display: block;
+  margin: 0px 5px;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", sans-serif;
+  text-align: justify;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: gray;
+}
+
+#navbar header {
+  font-size: 2.1rem;
+  padding: 10px;
+  text-align: center;
+  color: #1f1e1e;
+  display: block;
+}
+
+#navbar ul {
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar ul li {
+  position: relative;
+  list-style: none;
+  border-top: 1px solid;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  color: #414040;
+}
+
+#navbar a {
+  display: block;
+}
+
+#main-doc {
+  padding-top: 20px;
+  margin-left: 320px;
+}
+
+.main-section {
+  color: #414040;
+}
+
+.main-section header {
+  font-size: 2rem;
+  padding: 10px 0px;
+  color: #1f1e1e;
+}
+
+.main-section article {
+  margin: 10px 30px;
+}
+
+.main-section article p {
+  color: #414040;
+  margin: 20px 0px;
+}
+
+.main-section article ul {
+  padding-left: 50px;
+}
+
+.main-section article ul li {
+  margin-top: 20px;
+}
+
+.main-section article code {
+  display: block;
+  margin-left: 30px;
+  padding: 20px 10px;
+  background-color: rgba(224, 221, 221, 0.582);
+  border-radius: 0.5rem;
+}
+
+#outside-link {
+  color: blue;
+}
+
+@media only screen and (max-width: 815px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    z-index: 1;
+    border: none;
+    border-bottom: solid;
+    border-color: gray;
+  }
+  #navbar ul {
+    display: block;
+    border: 1px solid;
+    height: 210px;
+    padding: 0px 10px;
+  }
+  #navbar ul li {
+    font-size: 1rem;
+    padding: 1em;
+  }
+  #main-doc {
+    position: relative;
+    margin: 0px;
+    margin-top: 280px;
+    width: 100%;
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #navbar ul li {
+    font-size: 0.9rem;
+    padding: 0.8em;
+  }
+  .main-section article code {
+    margin-left: 0px;
+    width: 100%;
+  }
+}

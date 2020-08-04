@@ -1,0 +1,137 @@
+@import "../../Global_SCSS/resets";
+
+$primary-color: rgb(31, 30, 30);
+$secondary-color: rgb(65, 64, 64);
+$background-color: rgba(224, 221, 221, 0.582);
+
+body {
+  display: block;
+  margin: 0px 5px;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", sans-serif;
+  text-align: justify;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: gray;
+  header {
+    font-size: 2.1rem;
+    padding: 10px;
+    text-align: center;
+    color: $primary-color;
+    display: block;
+  }
+  ul {
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    li {
+      position: relative;
+      list-style: none;
+      border-top: 1px solid;
+      padding: 15px 20px;
+      font-size: 1.2rem;
+      color: $secondary-color;
+    }
+  }
+  a {
+    display: block;
+  }
+}
+
+#main-doc {
+  padding-top: 20px;
+  margin-left: 320px;
+}
+
+.main-section {
+  color: $secondary-color;
+  header {
+    font-size: 2rem;
+    padding: 10px 0px;
+    color: $primary-color;
+  }
+
+  article {
+    margin: 10px 30px;
+
+    p {
+      color: $secondary-color;
+      margin: 20px 0px;
+    }
+
+    ul {
+      padding-left: 50px;
+      li {
+        margin-top: 20px;
+      }
+    }
+
+    code {
+      display: block;
+      margin-left: 30px;
+      padding: 20px 10px;
+      background-color: $background-color;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+#outside-link {
+  color: blue;
+}
+
+@media only screen and (max-width: 815px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    z-index: 1;
+    border: none;
+    border-bottom: solid;
+    border-color: gray;
+    ul {
+      display: block;
+      border: 1px solid;
+      height: 210px;
+      padding: 0px 10px;
+      li {
+        font-size: 1rem;
+        padding: 1em;
+      }
+    }
+  }
+  #main-doc {
+    position: relative;
+    margin: 0px;
+    margin-top: 280px;
+    width: 100%;
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #navbar {
+    ul {
+      li {
+        font-size: 0.9rem;
+        padding: 0.8em;
+      }
+    }
+  }
+
+  .main-section {
+    article {
+      code {
+        margin-left: 0px;
+        width: 100%;
+      }
+    }
+  }
+}
