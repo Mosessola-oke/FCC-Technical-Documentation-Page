@@ -1,14 +1,37 @@
-@import "../../Global_SCSS/resets";
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+$primary-color:white;
+$secondary-color: white;
+$background-color: #2E2E2E;
+$border-color: #454545;
 
-$primary-color: rgb(31, 30, 30);
-$secondary-color: rgb(65, 64, 64);
-$background-color: rgba(224, 221, 221, 0.582);
+.blue{
+  color: #4D9CD6;
+}
+.green{
+  color: #4EA63E;
+}
+.orange{
+  color: #CE8552;
+}
 
 body {
   display: block;
   margin: 0px 5px;
   font-family: "Open Sans", "Segoe UI", "Helvetica Neue", sans-serif;
   text-align: justify;
+  background: black;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 #navbar {
@@ -16,7 +39,8 @@ body {
   min-width: 300px;
   height: 100%;
   border-right: solid;
-  border-color: gray;
+  border-left: solid;
+  border-color: $border-color;
   header {
     font-size: 2.1rem;
     padding: 10px;
@@ -31,7 +55,7 @@ body {
     li {
       position: relative;
       list-style: none;
-      border-top: 1px solid;
+      border-top: 1px solid $border-color;
       padding: 15px 20px;
       font-size: 1.2rem;
       color: $secondary-color;
@@ -44,7 +68,7 @@ body {
 
 #main-doc {
   padding-top: 20px;
-  margin-left: 320px;
+  margin-left: 400px;
 }
 
 .main-section {
@@ -75,7 +99,8 @@ body {
       margin-left: 30px;
       padding: 20px 10px;
       background-color: $background-color;
-      border-radius: 0.5rem;
+      color: white;
+      border: 1px solid $border-color;
     }
   }
 }
@@ -84,7 +109,7 @@ body {
   color: blue;
 }
 
-@media only screen and (max-width: 815px) {
+@media only screen and (max-width: 1000px) {
   #navbar {
     position: absolute;
     top: 0;

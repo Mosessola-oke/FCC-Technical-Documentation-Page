@@ -10,14 +10,14 @@
 
 <body>
   <nav id="navbar">
-    <header>JS Documentation</header>
+    <header>C# Documentation</header>
     <ul>
       <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-      <li><a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a></li>
+      <li><a class="nav-link" href="#.NET_Framework_Platform_Architecture">.NET Framework Platform Architecture</a></li>
       <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
-      <li><a class="nav-link" href="#Variables">Variables</a></li>
-      <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
-      <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
+      <li><a class="nav-link" href="#Declare_and_use_variables">Declare and use variables</a></li>
+      <li><a class="nav-link" href="#Work_with_strings">Work with strings</a></li>
+      <li><a class="nav-link" href="#Types_variables_and_values">Types variables and values</a></li>
       <li><a class="nav-link" href="#Reference">Reference</a></li>
     </ul>
   </nav>
@@ -25,81 +25,141 @@
     <section class="main-section" id="Introduction">
       <header>Introduction</header>
       <article>
-        <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
-        <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+        <p>C# is an elegant and type-safe object-oriented language that enables developers to build a variety of secure
+          and robust applications that run in the .NET ecosystem. The .NET ecosystem is composed of all the
+          implementations of .NET, including both but not limited to .NET Core, and .NET Framework. This article focuses
+          on .NET Framework. You can use C# to create Windows client applications, XML Web services, distributed
+          components, client-server applications, database applications, and much, much more.</p>
+        <p>As an object-oriented language, C# supports the concepts of encapsulation, inheritance, and polymorphism. All
+          variables and methods, including the Main method, the application's entry point, are encapsulated within class
+          definitions. A class may inherit directly from one parent class, but it may implement any number of
+          interfaces. Methods that override virtual methods in a parent class require the override keyword as a way to
+          avoid accidental redefinition. In C#, a struct is like a lightweight class; it is a stack-allocated type that
+          can implement interfaces but does not support inheritance.</p>
+        <p>In addition to these basic object-oriented principles, C# makes it easy to develop software components
+          through several innovative language constructs, including the following:</p>
         <ul>
-          <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
-          <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+          <li>Encapsulated method signatures called delegates, which enable type-safe event notifications.</li>
+          <li>Properties, which serve as accessors for private member variables.</li>
+          <li>Attributes, which provide declarative metadata about types at run time.</li>
+          <li>Inline XML documentation comments.</li>
+          <li>Language-Integrated Query (LINQ), which provides built-in query capabilities across a variety of data
+            sources.</li>
         </ul>
       </article>
     </section>
-    <section class="main-section" id="JavaScript_and_Java">
-      <header>JavaScript and Java</header>
+    <section class="main-section" id=".NET_Framework_Platform_Architecture">
+      <header>.NET Framework Platform Architecture</header>
       <article>
-        <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
-        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
-        <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+        <p>C# programs run on the .NET Framework, an integral component of Windows that includes a virtual execution
+          system called the common language runtime (CLR) and a unified set of class libraries. The CLR is the
+          commercial implementation by Microsoft of the common language infrastructure (CLI), an international standard
+          that is the basis for creating execution and development environments in which languages and libraries work
+          together seamlessly.</p>
+        <p>Source code written in C# is compiled into an intermediate language (IL) that conforms to the CLI
+          specification. The IL code and resources, such as bitmaps and strings, are stored on disk in an executable
+          file called an assembly, typically with an extension of .exe or .dll. An assembly contains a manifest that
+          provides information about the assembly's types, version, culture, and security requirements.</p>
+        <p>In addition to the run time services, the .NET Framework also includes an extensive library of over 4000
+          classes organized into namespaces that provide a wide variety of useful functionality for everything from file
+          input and output to string manipulation to XML parsing, to Windows Forms controls. The typical C# application
+          uses the .NET Framework class library extensively to handle common "plumbing" chores.</p>
       </article>
     </section>
     <section class="main-section" id="Hello_World">
       <header>Hello World</header>
       <article>
-        <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+        <p>Run the following code in the interactive window. Select the Enter focus mode button. Then, type the
+          following code block in the interactive window and select Run:</p>
         <code>
-          function greetMe(yourName) { alert("Hello " + yourName); }
-          greetMe("World");
+          Console.WriteLine(<span class="orange">"Hello World!"</span>);
         </code>
-        <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
+        <p>Congratulations! You've run your first C# program. It's a simple program that prints the message "Hello
+          World!". It used the Console.WriteLine method to print that message. Console is a type that represents the
+          console window. WriteLine is a method of the Console type that prints a line of text to that text console.</p>
       </article>
     </section>
-    <section class="main-section" id="Variables">
-      <header>Variables</header>
+    <section class="main-section" id="Declare_and_use_variables">
+      <header>Declare and use variables</header>
       <article>
-        <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
-        <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
-        <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+        <p>Your first program printed the string "Hello World!" on the screen.</p>
+        <p>Your first program is limited to printing one message. You can write more useful programs by using variables.
+          A variable is a symbol you can use to run the same code with different values. Let's try it! Replace the code
+          you've written in the interactive window with the following code:</p>
+        <code><span class="blue">string</span>  aFriend = <span class="orange">"Bill"</span>; <br>
+          Console.WriteLine(aFriend);</code>
+        <p>The first line declares a variable, aFriend and assigns it a value, "Bill". The second line prints out the
+          name.</p>
+        <p>The first line declares a variable, aFriend and assigns it a value, "Bill". The second line prints out the
+          name.</p>
+        <code>aFriend = <span class="orange">"Maira"</span>; <br>
+          Console.WriteLine(aFriend);</code>
+        <p>Notice that the same line of code prints two different messages, based on the value stored in the aFriend
+          variable.</p>
+        <p>You may have also noticed that the word "Hello" was missing in the last two messages. Let's fix that now.
+          Modify the lines that print the message to the following:</p>
+        <code>Console.WriteLine(<span class="orange">"Hello"</span> + aFriend);</code>
+        <p>Select Run again to see the results.Select Run again to see the results.</p>
+        <p>You've been using + to build strings from variables and constant strings. There's a better way. You can place
+          a variable between { and } characters to tell C# to replace that text with the value of the variable.</p>
+        <p>This is called String interpolation.</p>
+        <p>If you add a $ before the opening quote of the string, you can then include variables, like aFriend, inside
+          the string between curly braces. Give it a try:</p>
+        <code>Console.WriteLine(<span class="orange">$"Hello </span>{aFriend}<span class="orange">"</span>);</code>
+        <p>Select Run again to see the results. Instead of "Hello {aFriend}", the message should be "Hello Maira".</p>
       </article>
     </section>
-    <section class="main-section" id="Declaring_variables">
-      <header>Declaring variables</header>
+    <section class="main-section" id="Work_with_strings">
+      <header>Work with strings</header>
       <article>
-        <p>You can declare a variable in three ways:</p>
-        <p>With the keyword var. For example,</p>
-        <code>var x = 42.</code>
-        <p>This syntax can be used to declare both local and global variables.</p>
-        <p>By simply assigning it a value. For example,</p>
-        <code>x = 42.</code>
-        <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.</p>
-        <p>With the keyword let. For example,</p>
-        <code>let y = 13.</code>
-        <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+        <p>Your last edit was our first look at what you can do with strings. Let's explore more.</p>
+        <p>You're not limited to a single variable between the curly braces. Try this:</p>
+        <code><span class="blue">string</span> firstFriend = <span class="orange">"Maira"</span>; <br>
+          <span class="blue">string</span> secondFriend = <span class="orange">"Sage"</span>; <br>
+          Console.WriteLine(<span class="orange">$"My friends are</span> {firstFriend} <span class="orange">and</span> {secondFriend}<span class="orange">"</span>);</code>
+        <p>As you explore more with strings, you'll find that strings are more than a collection of letters. You can
+          find the length of a string using Length. Length is a property of a string and it returns the number of
+          characters in that string. Add the following code at the bottom of the interactive window:</p>
+          <code>Console.WriteLine(<span class="orange">$"The name</span> {firstFriend} <span class="orange">has</span> {firstFriend.Length} <span class="orange">letters."</span>); <br>
+            Console.WriteLine(<span class="orange">$"The name</span> {secondFriend} <span class="orange">has</span> {secondFriend.Length} <span class="orange">letters."</span>);</code>
       </article>
     </section>
-    <section class="main-section"  id="Function_declarations">
-      <header>Function declarations</header>
+    <section class="main-section" id="Types_variables_and_values">
+      <header>Types variables and values</header>
       <article>
-        <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+        <p>C# is a strongly typed language. Every variable and constant has a type, as does every expression that evaluates to a value. Every method signature specifies a type for each input parameter and for the return value. The .NET Framework class library defines a set of built-in numeric types as well as more complex types that represent a wide variety of logical constructs, such as the file system, network connections, collections and arrays of objects, and dates. A typical C# program uses types from the class library as well as user-defined types that model the concepts that are specific to the program's problem domain.</p>
+        <p>The information stored in a type can include the following:</p>
         <ul>
-          <li>The name of the function.</li>
-          <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
-          <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+          <li>The storage space that a variable of the type requires.</li>
+          <li>The maximum and minimum values that it can represent.</li>
+          <li>The members (methods, fields, events, and so on) that it contains.</li>
+          <li>The base type it inherits from.</li>
+          <li>The location where the memory for variables will be allocated at run time.</li>
+          <li>The kinds of operations that are permitted.</li>
         </ul>
-        <p>For example, the following code defines a simple function named square:</p>
-        <code>function square(number) { return number * number; }</code>
-        <p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.</p>
-        <code>return number * number;</code>
-        <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+        <p>The compiler uses type information to make sure that all operations that are performed in your code are type safe. For example, if you declare a variable of type int, the compiler allows you to use the variable in addition and subtraction operations. If you try to perform those same operations on a variable of type bool, the compiler generates an error, as shown in the following example:</p>
+        <code> <span class="blue">int</span> a = 5; <br>
+          <span class="blue">int</span> b = a + 2; <span class="green">//OK</span> <br>
+          
+          <span class="blue">bool</span>  test = <span class="blue">true</span> ; <br>
+          
+          <span class="green">// Error. Operator '+' cannot be applied to operands of type 'int' and 'bool'. </span> <br>
+          <span class="blue">int</span> c = a + test;</code>
+          <p>The compiler embeds the type information into the executable file as metadata. The common language runtime (CLR) uses that metadata at run time to further guarantee type safety when it allocates and reclaims memory.</p>
       </article>
     </section>
     <section class="main-section" id="Reference">
       <header>Reference</header>
       <article>
         <ul>
-          <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank" rel="noopener noreferrer" id="outside-link" >MDN</a></li>
+          <li>All the documentation in this page is taken from <a
+              href="https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework"
+              target="_blank" rel="noopener noreferrer" id="outside-link">.NET documentation</a></li>
         </ul>
       </article>
     </section>
   </main>
 </body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </html>
